@@ -21,7 +21,7 @@ exiftool flag2of2-final.pdf
 ```
 Note the 'File-Type' field identifies the file as a *png*, not pdf:
 
-![Exiftool Output](.assets\Screenshot 2024-07-02 104249.png)
+![Exiftool Output](./picoCTF2024\.assets\secretsofpolyglot.png)
 
 To change file extension:
 
