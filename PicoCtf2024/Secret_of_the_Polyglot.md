@@ -21,7 +21,7 @@ exiftool flag2of2-final.pdf
 ```
 Note the 'File-Type' field identifies the file as a *png*, not pdf:
 
-![secretsofpolyglot](https://github.com/jvargit/CTF_Challenges/assets/161411434/88948798-5767-46a2-a61a-bda53d3d96dd))
+![secretsofpolyglot](https://github.com/jvargit/CTF_Challenges/assets/161411434/88948798-5767-46a2-a61a-bda53d3d96dd)
 
 To change file extension:
 
