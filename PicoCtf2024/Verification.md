@@ -18,3 +18,10 @@ In order to find our flag file, we must identify a file with a matching hash. SH
 
 The use of /* computes the hash of every file within the folder "files". The output is piped into the 'grep' command which filters exclusively for results containing the given checksum.
 
+The output reveals file **'e018b574'** has a matching hash. To run the decryption algorithm on this file:
+
+> ./decrypt.sh files/e018b574
+
+Consequently revealing the flag:
+
+**picoCTF{trust_but_verify_e018b574}**
