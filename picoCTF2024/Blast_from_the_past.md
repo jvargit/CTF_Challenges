@@ -16,19 +16,21 @@ To begin with, I used exiftool to view the timestamps contained in the image:
 ```
 exiftool original.jpg
 ```
-!exiftool date and time images
-
 There are a number of time stamps which can be modified via exiftool:
+![exifdate](https://github.com/jvargit/CTF_Challenges/assets/161411434/b5a7679a-8905-4948-9973-f56816a1eaf1)
+![exiftime](https://github.com/jvargit/CTF_Challenges/assets/161411434/4d9df5e1-0e0f-4367-b309-95eadd36fd8d)
 
+To change these modifiable time stamps to requested date/time:
 ```
-exiftool -AllDates='1970:01:01 00:00:00.001' -CreateDate='1970:01:01 00:00:00.001' -DateTimeOriginal='1970:01:01 00:00:00.001' -ModifyDate='1970:01:01 00:00:00.001' -SubSecCreateDate='1970:01:01 00:00:00.001' -SubSecDateTimeOriginal='1970:01:01 00:00:00.001' -SubSecModifyDate='1970:01:01 00:00:00.001' original.jpg
+exiftool -AllDates='1970:01:01 00:00:00.001' -SubSecCreateDate='1970:01:01 00:00:00.001' -SubSecDateTimeOriginal='1970:01:01 00:00:00.001' -SubSecModifyDate='1970:01:01 00:00:00.001' original.jpg
 ```
 
 > AllDates is an exiftool shortcut that edits the three major EXIF tags - DateTimeOriginal, CreateDate and ModifyDate.
 
+
 However, exiftool can only modify 'tags', not 'descriptions', and the remaining 'Time Stamp' description still needs to be changed:
 
-!time stamp image
+![timestamp](https://github.com/jvargit/CTF_Challenges/assets/161411434/9b3aa721-1d03-41a3-aa56-87b1286c2253)
 
 Doing a verbose rerun of exiftool filtering for 'Time' reveals a value for 'TimeStamp':
 
@@ -36,13 +38,15 @@ Doing a verbose rerun of exiftool filtering for 'Time' reveals a value for 'Time
 exiftool -v3 original.jpg | grep Time
 ```
 
-!timestmap image
+![verbose](https://github.com/jvargit/CTF_Challenges/assets/161411434/50437953-3c65-4fbc-bb07-7053580b5b9a)
 
-We can also see the location of this value in the hex code:
+We can also see the location of this value in the hexadecimal code:
 
-!hexcode image
+![timestamphex](https://github.com/jvargit/CTF_Challenges/assets/161411434/4ea280a1-2a46-45fe-9df1-25acf2682dab)
 
-Asking ChatGpt, the timestamp appears to be in milliseconds since the Unix epoch - which is our desired date (January 1, 1970). As a result, the value of the date portion of the timestamp must be changed to is all zero. The scenario requests the time is set to 00:00:00.001 (so one millisecond) and the updated hex code should also reflect this.
+ChatGPT tells me this timestamp appears to be in milliseconds since the Unix epoch - which is our desired date (January 1, 1970). As a result, the value of the date portion of the timestamp must be changed to all zero. The scenario requests the time is set to 00:00:00.001 (so one millisecond) and the updated hex code should also reflect this.
+
+> Unix time - commonly used in computing, can also measure in seconds / microseconds / nanoseconds. The amount of that unit (s, ms, etc) which has elapsed since 1st Jan 1970 00:00:00 UTC - the Unix epoch.
 
 This can be done via hexedit:
 
@@ -52,13 +56,17 @@ hexedit original.jpg
 
 Tab to toggle to ASCII, ctrl+S to search for '1700513181420'.
 
-Replace hex code for '1700513181420' to '1700513181421':
+Replace hex code for '1700513181420' to '0000000000001':
 
-!img
+Original:
+![hexbefore](https://github.com/jvargit/CTF_Challenges/assets/161411434/c3cbf482-bb90-4f71-a02b-68e2aaa0ba89)
+
+Modified:
+![hexafter](https://github.com/jvargit/CTF_Challenges/assets/161411434/38a9caa2-a36d-4288-9f2f-9effd82f8c3a)
 
 Ctrl+X to save and exit....
 
-> Submit modified image to given nc connection to receive flag:
+Submit modified image to given nc connection to receive flag:
 
 **picoCTF{71m3_7r4v311ng_p1c7ur3_a25174ab}**
 
