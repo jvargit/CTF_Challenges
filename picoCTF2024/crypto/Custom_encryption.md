@@ -38,7 +38,7 @@ Excerpt from source code - 'test' function which encrypts a given plaintext stri
 
 The encryption mechanism is as follows:
 
-1. Generate keys based off two prime numbers (p, g), as well as two random numbers ranging from (p-10, p), (g-10, g).
+#### 1. Generate keys based off two prime numbers (p, g), as well as two random numbers ranging from (p-10, p), (g-10, g).
 
 ```python
     p = 97
@@ -62,7 +62,8 @@ The encryption mechanism is as follows:
         return
 ```
 
-2. Perform XOR encryption on the input text, using another given string as a text key. In this case, the given text key is "trudeau":
+
+#### 2. Perform XOR encryption on the input text, using another given string as a text key. In this case, the given text key is "trudeau":
 
 ```python
 def dynamic_xor_encrypt(plaintext, text_key):
@@ -83,7 +84,8 @@ def dynamic_xor_encrypt(plaintext, text_key):
 - Appends resulting 'encrypted_char' to cipher_text
 - Stored in 'semi_cipher' variable
 
-3. Perform a further level of encryption using the 'encrypt' function:
+
+#### 3. Perform a further level of encryption using the 'encrypt' function:
 
 ```python
 def encrypt(plaintext, key):
@@ -116,13 +118,15 @@ if __name__ == "__main__":
     message = sys.argv[1]
     solve(message)
 ```
+![output of solved function](https://github.com/jvargit/CTF_Challenges/assets/161411434/13bc95ab-c478-4fba-8d67-287c6b59f894)
 
-Firstly, I wrote a function 'decrypt()' to reverse the steps of the 'encrypt()' function:
+#### Firstly, I wrote a function 'decrypt()' to reverse the steps of the 'encrypt()' function:
 
 ```python
 def decrypt(cipher, key):
     deciphered = []
     for num in cipher:
+
     	num = num / 311
     	num = num / key
     	num = int(num)
@@ -153,7 +157,7 @@ This successfully reverted the 'cipher' variable to its 'semi_cipher' state. Now
   1100
 ```
 
-So, to decrypt the 'semi_cipher' version of the given ciphertext, I call the 'dynamic_xor_encrypt()' function with the reversed semi-cipher and the given text key:
+#### So, to decrypt the 'semi_cipher' version of the given ciphertext, I call the 'dynamic_xor_encrypt()' function with the reversed semi-cipher and the given text key:
 
 ```python
 the_answer = dynamic_xor_encrypt(decipher[::-1], "trudeau")
@@ -172,7 +176,8 @@ flag = the_answer[::-1]
 ```
 
 To obtain the flag:
-picoCTF{custom_d2cr0pt6d_8b41f976}
+**picoCTF{custom_d2cr0pt6d_8b41f976}**
+
 
 
 
