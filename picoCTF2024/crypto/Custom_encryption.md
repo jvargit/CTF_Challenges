@@ -40,8 +40,8 @@ The encryption mechanism is as follows:
 
 1. Generate keys based off two prime numbers (p, g), as well as two random numbers ranging from (p-10, p), (g-10, g).
 
-```
-p = 97
+```python
+    p = 97
     g = 31
     if not is_prime(p) and not is_prime(g):
         print("Enter prime numbers")
@@ -84,9 +84,10 @@ def encrypt(plaintext, key):
         cipher.append(((ord(char) * key*311)))
     return cipher
 ```
-    - Takes input text
-    - For each letter in the text:
-        - Converts to ASCII code for corresponding character
-        - Multiplies by key
-        - Multiplies by 311
+
+- Takes input text
+- For each letter in the text:
+  - Converts to ASCII code for corresponding character
+  - Multiplies by key
+  - Multiplies by 311
 
