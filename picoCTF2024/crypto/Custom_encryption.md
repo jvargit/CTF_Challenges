@@ -9,9 +9,9 @@ Source code: https://artifacts.picoctf.net/c_titan/17/custom_encryption.py
 
 ## Solution
 
-Excerpt from source code:
+Excerpt from source code - 'test' function which encrypts a given plaintext string with a text key:
 
-'''python
+```python
     p = 97
     g = 31
     if not is_prime(p) and not is_prime(g):
