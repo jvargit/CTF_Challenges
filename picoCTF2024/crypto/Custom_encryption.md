@@ -125,8 +125,19 @@ def decrypt(cipher, key):
 This successfully reverted the 'cipher' variable to its 'semi_cipher' state. Now, only the XOR encryption had to be decrypted before retrieving the flag:
 
 >XOR encryption can be decrypted by rerunning the encryption process on the ciphertext using the same key that was used to encrypt it. For example:
-```math
-1100 ^ 1010
+
+```markdown
+  1100                  
+^ 1010
+------
+  0110
+
+  0110
+^ 1010
+------
+  1100
+```
+
 
 
 
