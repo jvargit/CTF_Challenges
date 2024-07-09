@@ -102,6 +102,21 @@ def encrypt(plaintext, key):
 
 So, in order to decrypt the ciphertext, I reversed the steps of the algorithm to create the decryption process:
 
+```python
+def solve (message):
+  key = keys("hello")
+  decipher = decrypt(cipher, key)
+  print(f'decrypted cipher is: {decipher}') 
+  the_answer = dynamic_xor_encrypt(decipher[::-1], "trudeau")
+  print(f'The answer: {the_answer}')  
+  flag = the_answer[::-1]
+  print(f'Flag: {flag}')
+  
+if __name__ == "__main__":
+    message = sys.argv[1]
+    solve(message)
+```
+
 Firstly, I wrote a function 'decrypt()' to reverse the steps of the 'encrypt()' function:
 
 ```python
@@ -138,6 +153,26 @@ This successfully reverted the 'cipher' variable to its 'semi_cipher' state. Now
   1100
 ```
 
+So, to decrypt the 'semi_cipher' version of the given ciphertext, I call the 'dynamic_xor_encrypt()' function with the reversed semi-cipher and the given text key:
+
+```python
+the_answer = dynamic_xor_encrypt(decipher[::-1], "trudeau")
+```
+
+The returns the string:
+
+```
+}679f14b8_d6tp0rc2d_motsuc{FTCocip
+```
+
+Which can be reversed:
+
+```
+flag = the_answer[::-1]
+```
+
+To obtain the flag:
+picoCTF{custom_d2cr0pt6d_8b41f976}
 
 
 
