@@ -74,6 +74,14 @@ def dynamic_xor_encrypt(plaintext, text_key):
         cipher_text += encrypted_char
     return cipher_text
 ```
+>enumerate () gets both the index 'i' and character 'char' of each character in plaintext
+
+- Takes input text and given text key ("trudeau")
+- Iterates through the plain text in reverse
+    - XOR's plaintext char ASCII value with text_key char ASCII value
+    - Converts result back to char
+- Appends resulting 'encrypted_char' to cipher_text
+- Stored in 'semi_cipher' variable
 
 3. Perform a further level of encryption using the 'encrypt' function:
 
@@ -85,9 +93,40 @@ def encrypt(plaintext, key):
     return cipher
 ```
 
-- Takes input text
+- Takes input text (semi_cipher) and given key (shared key)
 - For each letter in the text:
   - Converts to ASCII code for corresponding character
   - Multiplies by key
   - Multiplies by 311
+- Stored inside 'cipher' variable
+
+So, in order to decrypt the ciphertext, I reversed the steps of the algorithm to create the decryption process:
+
+Firstly, I wrote a function 'decrypt()' to reverse the steps of the 'encrypt()' function:
+
+```python
+def decrypt(cipher, key):
+    deciphered = []
+    for num in cipher:
+    	num = num / 311
+    	num = num / key
+    	num = int(num)
+    	num = chr(num)
+    	deciphered.append(num)
+    return deciphered
+```
+- Takes ciphertext as input alongside generated key
+- For each number in the ciphertext array:
+    - Divide by 311
+    - Divide by key 
+    - Convert to int, convert to char
+    - Append to 'deciphered' array
+
+This successfully reverted the 'cipher' variable to its 'semi_cipher' state. Now, only the XOR encryption had to be decrypted before retrieving the flag:
+
+>XOR encryption can be decrypted by rerunning the encryption process on the ciphertext using the same key that was used to encrypt it. For example:
+```math
+1100 ^ 1010
+
+
 
