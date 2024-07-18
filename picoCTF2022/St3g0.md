@@ -35,6 +35,17 @@ zsteg -a pico.flag.png
 ![$t3g0 zsteg](https://github.com/user-attachments/assets/ab9fd143-21bd-48db-b1ff-36095be59315)
 
 
-The flag can be clearly seen in the first line of the output. Initially, I did not understand how this data was concealed, so here is how it works:
+The flag can be clearly seen in the first line of the output:
+
+**picoCTF{7h3r3_15_n0_5p00n_a1062667}**
+
+Initially, I did not understand how this data was concealed, so here is how it works:
 
 ### Least Significant Bit (LSB) Encoding
+
+> A steganography technique which conceals messages by replacing the least significant (right most) bit(s) of an image with the bits of the message to be hidden
+
+The attack requires images to be of a certain size to house messages of a certain size - the idea is that by only modifying the least significant bit's there are no visual changes to the image and the message can be distributed throughout the images data. Formulas for determining the capacity of an image can be found here: https://blog.xpnsec.com/png-steganography/.
+
+The link above also contains code for both the encoding and decoding of a message via the LSB method in PNG images.
+
