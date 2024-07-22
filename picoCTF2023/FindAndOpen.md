@@ -22,11 +22,11 @@ Opening up the packet capture in Wireshark, I decided to scan through the conten
 
 These were all collected from the 'Data' section of the Ethernet frames:
 
-!pcap
+![wireshark](https://github.com/user-attachments/assets/2ce91ae4-7c7a-4f26-aa05-2fdb175a70e6)
 
 I attempted to decode the string 'AABBHHPJGTFRLKVGhpcyBpcyB0aGUgc2VjcmV0OiBwaWNvQ1RGe1IzNERJTkdfTE9LZF8=' in CyberChef as it appeared to be base64 encoded, however I received an incoherent output:
 
-!cyberchef
+![cyberchef](https://github.com/user-attachments/assets/ed4319c5-51ad-4427-ad27-d10cea4257ca)
 
 >Base64 encoded ciphertexts must have a length which is a multiple of 4.
 
