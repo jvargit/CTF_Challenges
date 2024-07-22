@@ -14,7 +14,7 @@ As an inital check on the image, I ran exiftool to analyse its metadata:
 exiftool flag.png
 ```
 
-!exiftool output
+![hidemeexif](https://github.com/user-attachments/assets/a55ec82d-64b6-4899-85c8-88b0f7b156af)
 
 Notice warning message 'Trailer data after PNG IEND chunk'. Ran xxd to check hex data:
 
@@ -22,7 +22,7 @@ Notice warning message 'Trailer data after PNG IEND chunk'. Ran xxd to check hex
 xxd flag.png
 ```
 
-!xxd output
+![hidemexxd](https://github.com/user-attachments/assets/9fa64576-39f8-4a2c-be2a-2ec80eb7ba62)
 
 Notice strings 'secret' and 'flag.png' in hex data after IEND chunk. This is suggestive of hidden files within the file, which can be extracted via binwalk:
 
@@ -30,11 +30,11 @@ Notice strings 'secret' and 'flag.png' in hex data after IEND chunk. This is sug
 binwalk -e flag.png
 ```
 
-!binwalk output
+![hidemebinwalk](https://github.com/user-attachments/assets/6b4baae3-56f1-4da4-9024-1e8c902c3267)
 
 Navigating to the extracted directory, we can use tree to view the location of the embedded 'flag.png':
 
-!tree output
+![hidemetree](https://github.com/user-attachments/assets/ee1752f3-636d-40b5-9c63-0f7b91ac6012)
 
 Open the image to reveal the flag:
 
