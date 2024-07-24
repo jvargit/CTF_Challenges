@@ -39,11 +39,12 @@ public class Main {
     }
 }
 ```
-> To run code from terminal, save the code in a text file named 'Main.java' (file name must match public class name)
-> Then compile with the command 'javac Main.java'
-> Then run with command 'java Main.java'
+> To run code from terminal:
+> - Save the code in a text file named 'Main.java' (file name must match public class name)
+> - Then compile with the command 'javac Main.java'
+> - Then run with command 'java Main'
 
-Running the code results in the following message"
+Running the code results in the following message:
 
 ```
 R0UND_N_R0UND_ADD17EC2
