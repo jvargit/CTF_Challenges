@@ -7,6 +7,7 @@ An attacker was able to intercept communications between a bank and a fintech co
 Additional details will be available after launching your challenge instance.
 
 File(s): https://artifacts.picoctf.net/c_titan/33/secret.enc
+
 https://artifacts.picoctf.net/c_titan/33/password.enc
 
 ## Solution
