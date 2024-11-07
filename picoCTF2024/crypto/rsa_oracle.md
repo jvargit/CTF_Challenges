@@ -1,4 +1,4 @@
-# interencdec - cryptography
+# rsa_oracle - cryptography
 
 ## Case
 
