@@ -52,9 +52,11 @@ Then, I divide that value by 0x61 - the hexadecimal representation of $m'$:
 
 Converting this to hex, and then to ASCII characters reveals the password '4955e':
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/a33808e1-9341-4e9c-8ab0-b9273d9ff75b)
 
-![alt text](image-1.png)
+
+![image-1](https://github.com/user-attachments/assets/2ac3e735-4601-4685-afc1-9fa53be305af)
+
 
 I confirmed this was the correct password by using the oracle to encrypt the number, and sure enough, the given password ciphertext matched.
 
@@ -64,6 +66,7 @@ The ciphertext given in __secret.enc__ is in OpenSSL salted format:
 Salted__��(��-�v\rAj�6<C����^&���򃤱q��\�/K����:��L��3'�~ 
 ```
 > This can be identified since it starts with the word 'Salted'
+> 
 > This form of encryption combines the salt and passphrase to derive the key and IV
 
 Finally, the following command can be run to decrypt the flag:
