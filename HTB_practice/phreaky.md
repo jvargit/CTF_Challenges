@@ -10,7 +10,7 @@ My first step any time I see a packet capture is to trace the TCP stream. So, I 
 
 Clicking through the TCP stream, we can see the encrypted TLS communications, as well as traffic taking place over the mail server. This traffic is what is interesting, as we can see the emails contain a part of a zip file, as well as the respective password to unzip it:
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 Checking all the TCP messages reveals 15 parts, and 15 passwords. I stored these all in a text document and began to work on a code file to decrypt and reassemble the original document:
 
@@ -72,7 +72,7 @@ with zipfile.ZipFile(zipFile) as file:
 
 This is repeated for every ciphertext and password, resulting in the "output" directory storing 15 unzipped files:
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Lastly, I concatenate the fifteen parts to assemble the original file:
 
