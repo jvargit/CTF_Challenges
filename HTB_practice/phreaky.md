@@ -6,7 +6,7 @@ Given a standalone pcap file `phreaky.pcap`.
 
 ## Solution
 
-My first step any time I see a packet capture is to trace the TCP stream. So, I initially identify the first TCP packet number 8 , right click, hit 'follow', and then 'TCP stream':
+My first step most times I see a packet capture is to trace the TCP stream. So, I initially identify the first TCP packet number 8 , right click, hit 'follow', and then 'TCP stream':
 
 Clicking through the TCP stream, we can see the encrypted TLS communications, as well as traffic taking place over the mail server. This traffic is what is interesting, as we can see the emails contain a part of a zip file, as well as the respective password to unzip it:
 
