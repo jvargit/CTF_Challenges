@@ -1,4 +1,4 @@
-# basic-mod1 - cryptography
+# transposition trial - cryptography
 
 ## Case:
 
