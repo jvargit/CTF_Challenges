@@ -1,4 +1,4 @@
-# basic-mod1 - cryptography
+# transposition trial - cryptography
 
 ## Case:
 
@@ -10,7 +10,11 @@ Ciphertext = heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V091B0AE}2
 
 Looking at the ciphertext, which we are told is split into blocks of three, we can see:
 
-'The' --> 'heT' , _fl --> fl_--> ag_ --> g_a etc..
+'The' --> 'heT' ,
+
+' 'fl --> fl' ' ,
+
+ag' ' --> g' 'a etc..
 
 Each character in a block of three is shifted back one space, and if it is the first character in the block of three, its place wraps around to be the last character in the block.
 
@@ -56,7 +60,7 @@ The code essentially:
 
 Running the program produces the following output:
 
-![alt text](picoCTF2022\.images\image.png)
+![image](https://github.com/user-attachments/assets/3f1cc3fa-a14b-4560-a678-32ac76ec4fa7)
 
 And the flag can be clearly obtained:
 
