@@ -17,7 +17,7 @@ N = 1615765684321463054078226051959887884233678317734892901740763321135213636796
 
 I began this solve by thinking about the maths behind RSA encryption / decryption. We are told that $m^e > N$, so simply performing $\sqrt[e]m$ will not produce the plaintext as desired.
 
-$C$ is given by $m^e \ (mod \ N)$, which can be rewritten as:
+$c$ is given by $m^e \ (mod \ N)$, which can be rewritten as:
 
 $c = m^e - Nx $, 
 
@@ -47,10 +47,13 @@ print("M is", m)
 
 > `iroot` returns an integer root of the given parameter (in this case, root 3 of m) and a boolean specifying whether the root was exact (no remainder)
 
+My loop continually calls the `iroot` method until it returns `True` for an exact root, storing this value in `solved` and the value of the cube root in `m`.
+
 The decoded message is originally in integer format, and is then converted to hex, then bytes, and then readable characters. The last line `m = m[m.index('p'):]` was added after obtaining the flag to splice off the initial padding for a more readable output.
 
 Running the program reveals the flag:
 
+![image](https://github.com/user-attachments/assets/967c8edc-c44b-48c3-8ef0-288a6f98855d)
 
 **picoCTF{e_sh0u1d_b3_lArg3r_60ef2420}**
 
