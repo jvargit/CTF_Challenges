@@ -55,11 +55,13 @@ Inserted XML Entity containing first attempt payload:
 ]>
 ```
 
-xxe1
+![xxe1](https://github.com/user-attachments/assets/dc8fa99d-4b6d-45b5-b3af-1d89d028a87a)
+
 
 Success! By replacing the version with the entity payload, I can see that the webpage is printing the contents of the passwd file from the hosting system. I tried a few more paths before realising the flag could simply be found by setting the payload to `/flag.txt`:
 
-xxe2
+![xxe2](https://github.com/user-attachments/assets/2ea29a82-7cde-4a54-8d02-0bf3025dfbc3)
+
 
 **HTB{b1om3tric_l0cks_4nd_fl1cker1ng_l1ghts_e34d5ec1334f7f5da949bccadd8a7550}**
 
