@@ -86,7 +86,7 @@ The function enumerates the ciphertext (setting index values in i and character 
 
 And, it works:
 
-`*HTB{timestamp_based_encrypt*`
+`HTB{timestamp_based_encrypt`
 
 Now, we just repeat the same decryption process for the second half of the flag, with the new parameters:
 
@@ -112,4 +112,4 @@ Running the code produces the following output:
 
 Not the cleanest of solves, but wihtout too much difficulty we can see the flag:
 
-`*HTB{timestamp_based_encryption_is_so_secure_i_promise}*`
+`HTB{timestamp_based_encryption_is_so_secure_i_promise}`
