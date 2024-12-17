@@ -74,7 +74,11 @@ And then logged in with the second username:
 
 `{"option": "login"}`
 
-`{"username": "TEXTCOLLBYfGiJUETHQ4hEcKSMd5zYpgqf1YRDhkmxHkhPWptrkoyz28wnI9V0aHeAuaKnak", "password": "secure123"}`
+`{"username": "TEXTCOLLBYfGiJUETHQ4hEcKSMd5zYpgqf1YRDhkmxHkhPWptrkoyz28wnI9V0aHeAuaKnak", "password": "anything"}`
 
+Doing so reveals the flag ;))))))):
 
+```
+HTB{finding_alphanumeric_md5_collisions_for_fun_https://x.com/realhashbreaker/status/1770161965006008570_6007a7825ee990b8050f35316a6c5022}
+```
 
