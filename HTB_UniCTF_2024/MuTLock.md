@@ -86,7 +86,7 @@ The function enumerates the ciphertext (setting index values in i and character 
 
 And, it works:
 
-`*HTB{timestamp_based_encrypt*`
+`HTB{timestamp_based_encrypt`
 
 Now, we just repeat the same decryption process for the second half of the flag, with the new parameters:
 
@@ -107,8 +107,9 @@ Since the errors don't filter out bad results for us, I use an if check to see i
 
 Running the code produces the following output:
 
-![alt](HTB_UniCTF_2024\images\image.png)
+![image](https://github.com/user-attachments/assets/a93d10ac-63f4-4688-83a0-3cd78ac03cc0)
 
-Not the cleanest of solves, but easily enough we can see the flag:
 
-`*HTB{timestamp_based_encryption_is_so_secure_i_promise}*`
+Not the cleanest of solves, but wihtout too much difficulty we can see the flag:
+
+`HTB{timestamp_based_encryption_is_so_secure_i_promise}`
