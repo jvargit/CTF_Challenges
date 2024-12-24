@@ -14,7 +14,7 @@ Firstly, I did some initial enumeration using `gobuster` and found the /uploads 
 gobuster dir -u http://atlas.picoctf.net:53251/ -w /usr/share/dirb/wordlists/common.txt
 ```
 
-img
+![trickgobuster](https://github.com/user-attachments/assets/446f8aec-e8bb-42f5-96a7-a5982d41249e)
 
 Presumably this is where any uploaded files will be stored and theoretically where a reverse shell could be accessed if achieved.
 
@@ -22,11 +22,11 @@ Then, I started to experiment uploading different files to gain an understanding
 
 Uploading JPEG file:
 
-img
+![pngext](https://github.com/user-attachments/assets/12132bd7-f057-4b27-b283-9cda46aebf8e)
 
 So I renamed my JPEG file to include the `.png` extension and tried again:
 
-img
+![jpegmagicbytes](https://github.com/user-attachments/assets/fe53b722-2b2f-46a3-ac80-36ead11ca7ef)
 
 The application prints the magic numbers of a JPEG file - so it likely expects the magic numbers of a PNG which are `89 50 4e 47`. 
 
@@ -36,7 +36,7 @@ Using this information, I can begin trying to embed php code into a file meeting
 
 I created `empty.png` and wrote in the magic numbers `89 50 4e 47` using `hexedit`.
 
-2. Sourced [shellcode](https://gist.github.com/joswr1ght/22f40787de19d80d110b37fb79ac3985):
+2. Sourced [shellcode](https://gist.github.com/joswr1ght/22f40787de19d80d110b37fb79ac3985)
 
 3. Appended shellcode to `empty.png`:
 
