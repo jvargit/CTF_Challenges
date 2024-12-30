@@ -53,7 +53,8 @@ Entering this payload in both the username and password field successfully logs 
 
 Checking the server response to the successful log in, a base64 value can be found in the token:
 
-image
+![nosql](https://github.com/user-attachments/assets/c27dcfb7-6762-4b2d-b4f7-e5a0e37c2a2d)
+
 
 Which can be decoded to reveal the flag:
 
