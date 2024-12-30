@@ -42,7 +42,7 @@ Then, I start to create a wordlist which can be used to try a number of combinat
 1. Create wordlist `countries.txt` containing list of all countries in the world (I sourced the list [here](https://gist.github.com/kalinchernev/486393efcca01623b18d)). 
  - Convert all countries to lower case 
 
-2. Create wordlist `years.txt` containing list of [years](https://springhole.net/writing/copyable-year-lists-1-5999.html)(originally I started from the year 2000, but ended up having to extend the time range back to 1980)
+2. Create wordlist `years.txt` containing list of  [years](https://springhole.net/writing/copyable-year-lists-1-5999.html) (originally I started from the year 2000, but ended up having to extend the time range back to 1980)
 
 3. For each year, append every country to generate completed `wordlist.txt`:
 
@@ -90,7 +90,8 @@ for file in encrypted_files:
 
 Originally, the code only worked for `encrypted_friend2.txt`. After extending the year range, and looking through the country list for potential errors ('russia' was stored as 'russian federation'), I was able to decrypt all three ciphertexts:
 
-img
+![Screenshot 2024-12-30 173446](https://github.com/user-attachments/assets/d0882143-099a-4e5f-830b-3da9b73f9c4f)
+
 
 Looking inside each decrypted file, we can find each part of the flag to arrange:
 
