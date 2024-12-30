@@ -19,6 +19,10 @@ This suggests an XXE attack may be possible. I send the POST request to the Repe
 
 <data><ID>&payload;</ID></data>
 ```
+> Document Type Definition (DTD) specifies the structure, rules and entities used within the XML document
+> Square brackets [] define subset of DTD. This subset defines additional entities that can be used in the document
+> <!ENTITY payload SYSTEM "/etc/passwd"> declares an external entity named payload 
+> &payload; replaces the ID with the contents of /etc/passwd
 
 The XXE attack is a success:
 
