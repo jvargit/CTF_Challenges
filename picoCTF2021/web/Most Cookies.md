@@ -30,15 +30,18 @@ If the `very_auth` cookie is set to `admin`, then we can view the flag.
 
 Firstly, I captured a default cookie in BurpSuite when accessing the website and decoded it using [Flask-Unsign](https://github.com/Paradoxis/Flask-Unsign):
 
-img1
+![mostcookies1](https://github.com/user-attachments/assets/ba53fac0-a8bf-419f-b502-75acf4022cb7)
+
 
 We can see that this is the `very_auth` identifier and just need to change the value from `blank` to `admin`. If we know the Flask secret key, we can use it to sign cookies and forge our own. So, I created a wordlist from the `cookie_names` list and brute forced with `flask-unsign`:
 
-img2
+![mostcookies2](https://github.com/user-attachments/assets/e78229ff-b19f-460a-97b9-9bcf71609e5d)
+
 
 Now that we know the secret key is `fortune` we can use it to create our own cookie:
 
-img3
+![mostcookies3](https://github.com/user-attachments/assets/326f73fb-6f66-4d24-b057-122cac3ab057)
+
 
 Embedding this cookie in the GET request for the webpage produces the flag:
 
