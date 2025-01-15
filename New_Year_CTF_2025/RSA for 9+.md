@@ -6,7 +6,7 @@ Provided nc command to connect to server. Server provides RSA params n, d, e, c 
 
 ## Solve
 
-The core of this challenge is to write a script which can automatically receive parameters from the server, decrypt the plaintext and send it back to server. This was my first time using `pwntools` and was very enjoyable to learn about its functionality.
+The core of this challenge is to write a script which can automatically receive parameters from the server, decrypt the plaintext and send it back to server before it times out. This was my first time using `pwntools` and it was very enjoyable to learn about its functionality.
 
 Firstly, I wrote a function to decrypt the base64 encoded ciphertext provided in the servers message:
 
@@ -130,6 +130,6 @@ for i in range(60):
 server.close()
 ```
 
-One part which took a while was managing how the script would handle completing the final round. I realised that by using regex to find the amount of final rounds I could avoid the error I was encountering as the program continued looking for certain bytes in the servers response. Running the script produced the flag:
+One part which took a while was managing how the script would handle completing the final round. I realised that by using regex to find the amount of rounds I could avoid the error I was encountering as the program continued looking for certain bytes in the servers response. Running the script produced the flag:
 
 `grodno{fb3f00Take_y0urself_the_b1ggest_candy1ffce6}`
