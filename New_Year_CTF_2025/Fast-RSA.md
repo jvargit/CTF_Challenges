@@ -38,10 +38,10 @@ for _ in range(1000):
 print(count)
 ```
 
-img 
+![Screenshot 2025-01-16 134015](https://github.com/user-attachments/assets/f774de68-2379-4a55-958d-add8e2d1da7c)
 
-125 out of 1000 attempts had different values for p and q. Trying to solve by simply square rooting `n` shows we are in one of these situations as the flag can't be obtained.
 
+125 out of 1000 attempts had different values for p and q. Unfortunately, we are in one of these situations - trying to solve by simply square rooting `n` quickly shows it will not work.
 Instead , since `p` and `q` are very close together, we can try and brute force factorisation:
 
 ```py
@@ -69,7 +69,8 @@ for p in range(sqrt - 100, sqrt + 100):
 >`if isPrime(p) and isPrime(q): ` 
 - checks if both `p` and `q` are prime. If so, these are the values of `p` and `q` used to compute `n`
 
-im2
+![im2](https://github.com/user-attachments/assets/5a8b7c79-de43-40cf-bb00-e106ea6e67c0)
+
 
 Now `p` and `q` have been obtained, we can find `phi(n)`:
 
