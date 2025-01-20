@@ -6,9 +6,10 @@ Provided website, asked to login as `admin`. Also provided `/filter.php` endpoin
 
 ## Solve:
 
-Viewing the webpage, we are prompted to log in phase 1/5. Doing a test we see how the database is queried:
+Fun challenge which forced research of different SQLi payloads & techniques. Viewing the webpage, we are prompted to log in phase 1/5. Doing a test we see how the database is queried:
 
-img 
+![g1](https://github.com/user-attachments/assets/8522704d-b43d-4a85-9419-27aa87472aad)
+
 
 The respective filter is "or".
 
