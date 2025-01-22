@@ -42,13 +42,13 @@ reversed = decrypted_data[::-1]
 print(f"Decrypted data: {reversed}")
 ```
 > ` c = base64.b32decode(ct)`
-    - Base32 decode the encoded ciphertext
+- Base32 decode the encoded ciphertext
 > `cipher = AES.new(key, AES.MODE_CBC, iv)`
-    - Create an AES cipher object, with the mode set to CBC
+- Create an AES cipher object, with the mode set to CBC
 > `decrypted = cipher.decrypt(c)`
-    - Decrypt the ciphertext bytes
+- Decrypt the ciphertext bytes
 > `unpadded = unpad(decrypted, AES.block_size)`
-    - Remove padding (which is to fulfil block size of 16 bytes)
+- Remove padding (which is to fulfil block size of 16 bytes)
 
 The output of the `aes_decrypt()` function is reversed, hence `reversed = decrypted_data[::-1]`.
 
