@@ -141,6 +141,26 @@ Manually checking the ports from the previous question with `tcp.port == <port>`
 
 ### The Unused Tool 
 
+In the same TCP stream where we can view the attackers commands, we can see they attempted to install and run `tmux` but was unsuccessful:
+
+nw15
+
+nw16
+
+`KCTF{tmux}`
+
 ### Malicious Uploads 
 
+This challenge goes back to the first packet capture and asks for the name of the maliciously uploaded file. Since            `/blog/create` has been exploited before, can check for POST requests and find `serverfile.php`:
+
+nw17
+
+`KCTF{serverfile.php}`
+
 ### Shell History
+
+Apparently a malicious shell file already existed on the system. The flag asks for the date and time, suggesting an `ls` may have been used with the `l` flag showing the date/time as well as the file name (credit to `sealldev`). Going back to the attackers commands and checking for an `ls -l` proves this theory correct:
+
+nw18
+
+`KCTF{php-reverse-shell.php_Jan_19}`
