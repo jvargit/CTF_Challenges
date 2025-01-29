@@ -61,11 +61,15 @@ func catify(input string, keys []int) string {
 - Once keys have been applied to the input text and it has been hex encoded, iterate through each hex digit and apply cat subsitution alphabet
 
 So, to decrypt this ciphertext, we need to reverse these steps:
-1. Convert cat digits back to hex string
-2. Decode hex string back to keyed text
-3. Reverse key operation (by subtracting key values from Unicode code point values) to obtain plaintext
 
-#### Convert cat digits back to hex string
+**1. Convert cat digits back to hex string**
+
+**2. Decode hex string back to keyed text**
+
+**3. Reverse key operation (by subtracting key values from Unicode code point values) to obtain plaintext**
+
+
+### Convert cat digits back to hex string
 
 Thanks to LLM for writing the dictionary to reverse the emojis:
 
@@ -102,19 +106,20 @@ def decode_cats_to_digits(cat_string):
 
     `emojis = list(cat_string)`
 
-    img
+    ![Screenshot 2025-01-29 120310](https://github.com/user-attachments/assets/d2843657-e7dd-41af-af89-eb31b3adf39d)
+
 - If a double character is found, the emojis are replaced by a hex digit and `i` iterates to the next unchecked character 
 - The code then checks for single length characters and replaces with the respective hex digit until the end of the string is reached
 
-#### Decode hex string back to keyed text
+### Decode hex string back to keyed text
 
 Now that we have the hex encoded keyed text, we need to revert like so:
 
-`keyed_text = binascii.unhexlify(hex_string).decode('utf-8')`
+`keyed_text = binascii.unhexlify(hex_string).decode()`
 - `unhexlify()` converts the hex string to raw binary bytes
 - `.decode()` convers to text
 
-#### Reverse key operation (by subtracting key values from Unicode code point values) to obtain plaintext
+### Reverse key operation (by subtracting key values from Unicode code point values) to obtain plaintext
 
 Looking at `getKeys()` we can see that the program essentially generates a list of keys ranging from 0-59999 of a length equal to the length of the input:
 
