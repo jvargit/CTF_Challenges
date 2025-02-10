@@ -32,7 +32,7 @@ c = 1568991097303585492151879879378118636899250575774558330520050867078057985733
 
 ## Solve
 
-Viewing the encryption algorithm, we can see that three primes have been used in this RSA scheme. The most notably flawed part is that the primes are sequential in order and are therefore close together:
+Viewing the encryption algorithm, we can see that three primes have been used in this RSA scheme. The most notable flaw is that the primes are sequential in order and are therefore close together:
 
 ```py
 def nextprime(n):
@@ -50,9 +50,11 @@ r = nextprime(q)
 
 These values are used to compute `n`:
 
-`n = p*q*r`
+```py
+n = p*q*r
+```
 
-Since the three primes are close together, `p`, `q` and `r` should be approximately near the cube root of `n` - with `p` being below the cube root, `r` being above it and `q` somewhere in between.
+Since the three primes are close together, `p`, `q` and `r` should be approximately near the cube root of `n` -  with `p` being below the cube root, `r` being above it and `q` somewhere in between.
 
 I wrote the following loop to brute force the values of `p`, `q` and `r` used to generate `n`:
 
