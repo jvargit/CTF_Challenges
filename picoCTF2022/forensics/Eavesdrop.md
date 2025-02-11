@@ -10,13 +10,15 @@ Viewing the packet capture, there is only 75 packets - it shouldn't be too hard 
 
 Locating the first TCP packet, I followed TCP stream and saw the following conversation right away:
 
-img
+![eavesdrop](https://github.com/user-attachments/assets/a2bacb3d-1d36-4895-a6e8-41d11f7859b7)
+
 
 So, we can see that some kind of encrypted file has been transferred to port 9002.
 
 Applying the filter `tcp.dstport == 9002` we can see packet number 57 is where the data transfer takes place, the earlier / later packets are just parts of the TCP opening / closing of the session.
 
-img2
+![eavesdrop1](https://github.com/user-attachments/assets/b784a4b3-1901-449d-934d-9f434b807587)
+
 
 In order to extract this encrypted file, I:
 
@@ -44,7 +46,9 @@ In order to extract this encrypted file, I:
 ```bash
 hexedit file.des3
 ```
-im3
+
+![eavesdrop2](https://github.com/user-attachments/assets/c97cfbc4-d32a-4267-9497-c423adb740cf)
+
 
 Now we simply need to run the `openssl` command found in tcp stream:
 
