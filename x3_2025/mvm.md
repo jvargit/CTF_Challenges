@@ -17,9 +17,11 @@ This is solved by:
 - Decoding from BrainFuck
 
 ***Substituting & decoding from binary***
-img1
+![Screenshot 2025-02-10 140840](https://github.com/user-attachments/assets/244b13ae-5d0b-4485-a923-e8af82ce4edb)
+
 
 ***Decoding from BrainFuck***
-img2
+![Screenshot 2025-02-10 141019](https://github.com/user-attachments/assets/3e86b96a-f842-4553-85ae-7e96260873f9)
+
 
 `MVM{MVM_BRAIN_IS_FUCKED_MVM}`
