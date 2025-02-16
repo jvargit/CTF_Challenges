@@ -10,13 +10,14 @@ Hint - You can send a link to your post that the admin bot will visit.
 
 In this challenge we are provided a webpage where users can post messages. 
 
-img1
+![mavs-1](https://github.com/user-attachments/assets/70c2beb9-22cf-4947-970f-24c66b566136)
+
 
 When a message is posted, a URL is generated which can be sent to the 'admin bot' who will visit the post.
 
 This seemed like an XXS so I firstly tested for script injection:
 
-```javascript
+```html
 <script>alert('working')</script>
 ```
 
@@ -32,7 +33,7 @@ Next I tested for an event based XSS:
 
 This was successful, and the popup is displayed on the screen:
 
-img2
+![mavs2](https://github.com/user-attachments/assets/e385a1da-4783-4f68-ae76-4c81b1d86d8b)
 
 So we know we can use this method to execute code within the browser of the user visiting the post. Just need the right payload to read `/admin`.
 
@@ -61,6 +62,7 @@ Credit to my teammate `Solopie` for his initial solution which assisted me in de
 
 Submitting the generated URL to the admin bot and checking the webhook site shows that the payload was successful:
 
-img3 
+![mavs3](https://github.com/user-attachments/assets/935f4044-3537-42b6-b4f7-49f3c75288a6)
+
 
 `lactf{m4yb3_w3_sh0u1d_tr4d3_1uk4_f0r_4d}`
