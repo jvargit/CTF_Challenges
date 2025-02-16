@@ -4,7 +4,8 @@
 
 Just click the flag :)
 
-img
+![luckyflag](https://github.com/user-attachments/assets/306dad41-a24e-49fa-b6f2-5c56195b32ed)
+
 
 ## Solve
 
