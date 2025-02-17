@@ -42,15 +42,11 @@ print("n = ", n)
 This problem is an example of the security risk of multiple encryptions with different values for `e` and the same modulus `n`. Doing this gives rise to a set of simulatenous equations:
 
 $$ 
-
 m ^ {e_1} \mod n = c_1 
-
 $$
 
 $$
-
 m ^ {e_2} \mod n = c_2 
-
 $$
 
 Since $c_1$, $c_2$, $e_1$, $e_2$ and $n$ are known, we can solve for $m$.
