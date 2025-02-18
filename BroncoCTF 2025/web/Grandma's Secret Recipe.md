@@ -32,10 +32,7 @@ It matches, so now we can simply generate the MD5 hash for `grandma`, modify our
 echo -n 'grandma' | md5sum
 ```
 
-> a5d19cdd5fd1a8f664c0ee2b5e293167
-
-
-Resending the request we can access the `/grandma` page and obtain the flag:
+Resending the request with `checksum` set to the generated hash we can access the `/grandma` page and obtain the flag:
 
 ![gma3](https://github.com/user-attachments/assets/fab0722f-2df3-4c74-88d8-62dc2c2ad808)
 
