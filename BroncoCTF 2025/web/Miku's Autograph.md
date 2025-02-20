@@ -14,7 +14,7 @@ You are not miku_admin!!!
 
 We can also see our request is sent with a `magic_token`:
 
-img1
+![miku1](https://github.com/user-attachments/assets/66abe73c-64c9-418d-86ac-149f900c9950)
 
 
 This is a JSON web token (JWT) which has the following structure:
@@ -47,7 +47,7 @@ The signature component of the token takes the base64 encoded header and payload
 
 It turns out we can bypass this signature by setting the `alg` header to `none` and can modify the payload as we like.
 
-The newly crafted token (unencoded looks like this):
+The newly crafted token (unencoded) looks like this:
 
 ***Header***
 
@@ -75,6 +75,7 @@ eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0=.eyJzdWIiOiJtaWt1X2FkbWluIiwiZXhwIjoxNzM5Nzc
 
 Sending the request we can successfully obtain the flag:
 
-img2
+![miku2](https://github.com/user-attachments/assets/2ddd3cff-c6e5-486a-9c0f-0783b590df18)
+
 
 `bronco{miku_miku_beaaaaaaaaaaaaaaaaaam!}`
