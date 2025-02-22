@@ -70,13 +70,14 @@ for word in flag_words:
 print(flag_words)
 print(flag_substituted)
 ```
-img1
+![pru](https://github.com/user-attachments/assets/88a6ffed-34e2-4f09-a023-f20d3f88fe9a)
 
-The output shows that some of the words in the flag could easily be directly replaced just by considering their positions in the plain and ciphertext.
+
+The output shows that some of the words in the flag could easily be found just by considering their positions in the plain and ciphertext.
 
 Then, I began to manually search through the ciphertext for instances of the unreconciled words, and began creating a dictionary containing potential plain/cipher pairs. 
 
-Slowly it became apparent that the ciphertext was not using text as symbols for letters or words, but rather for phonetic sounds. This also made sense as all the words which were able to be matched instantaneously had letter correspondents, e.g:
+Slowly it became apparent that the ciphertext was not using text as symbols for letters or words, but rather for phonetic sounds. This also made sense as all the words which were matched immediately had letter correspondents, e.g:
 
 - `be` --> `b`
 - `sea` --> `c`
