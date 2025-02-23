@@ -12,6 +12,7 @@ Samddre··ath·dhf@_oesoere·ebun·yhot·no··oso·i·a·lr1rcm·iS·aruf·toi
 
 Simple challenge, looking at hints we just use railway cipher with a key of 10:
 
-img
+![acrosstracks](https://github.com/user-attachments/assets/de71cc94-0606-4b38-bc88-3aceb37768b7)
+
 
 `bronco{r@1l_f3nc3_cip3rs_r_cool}`
