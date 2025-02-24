@@ -59,7 +59,8 @@ Since we are able to openly view the IV in the ciphertext, and the key is genera
 
 Connecting to the server and doing a few test encryptions immediately shows a repeated IV:
 
-img
+![Screenshot 2025-02-23 162356](https://github.com/user-attachments/assets/310b64db-df1e-4cb0-95d4-94e8b64f3c29)
+
 
 ```
 da4f91417cc40c722bea594809044f3d
