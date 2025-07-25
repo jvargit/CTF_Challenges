@@ -6,7 +6,8 @@ This giant insect is terrifying. Can you help us find the town where this is loc
 
 Flag is formatted cysea{town_animal_size}. E.g. cysea{ningaloo_whaleshark_18.8m}
 
-img
+<img width="160" height="131" alt="antsy" src="https://github.com/user-attachments/assets/1f5be1eb-758c-4468-8966-ca7fe385e0a6" />
+
 
 ## Solve
 
