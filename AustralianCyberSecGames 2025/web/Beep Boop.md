@@ -14,7 +14,8 @@ The description is very much suggestive of checking the `robots.txt` file. Doing
 
 `/MN4XGZLBPNZDAYRQORZV6NDOMRPXG4BRMRSXE435`
 
-img
+<img width="417" height="99" alt="robots" src="https://github.com/user-attachments/assets/8c21446f-acbd-49a0-9848-e011007e3150" />
+
 
 Decoding from `base32` gives the flag:
 
