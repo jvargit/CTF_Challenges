@@ -6,7 +6,8 @@ Comrade Elira Voss visited a beach recently that she wants to hold our final hoo
 
 Flag is in format cysea{name_of_beach}. It is case insensitive.
 
-img
+![royal](https://github.com/user-attachments/assets/5f626ab5-b8d5-45a8-96a3-73c00cdb6558)
+
 
 ## Solve
 
