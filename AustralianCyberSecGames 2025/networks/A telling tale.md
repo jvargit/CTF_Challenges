@@ -36,7 +36,8 @@ Nmap done: 1 IP address (1 host up) scanned in 1.94 seconds
 nc office.centrist.freedonia.vote 17
 ```
 
-qotd.png
+<img width="710" height="580" alt="qotd" src="https://github.com/user-attachments/assets/51e5a87d-727c-46ed-a180-442a946e1800" />
+
 
 Connecting we find the flag as well as some clues which are useful in the later challenges.
 
