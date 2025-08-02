@@ -6,7 +6,8 @@ Okay we're a little lost.... I thought driving through the middle would be easy,
 
 Flag is in the format cysea{RoadName_Latitude_Longitude} eg cysea{TallRoad_-33.774_151.114}. Latitude and longitude is to nearest 3 decimal places.
 
-trees-plenty.png
+<img width="1387" height="548" alt="trees-plenty" src="https://github.com/user-attachments/assets/53a6e4b3-22ce-4cf7-b3ac-72af5b9d84e8" />
+
 
 ## Solve
 
