@@ -4,7 +4,8 @@
 
 My friend Katie wrote this Language of Trees which is truly fantastic... Well it would be if I understood it at all, she sent me this letter before she ever taught me how to read this new language she made. Could you help me decipher it?
 
-img
+<img width="1150" height="266" alt="gold" src="https://github.com/user-attachments/assets/aa942101-bdbc-4fa7-a818-7de8a62aae9b" />
+
 
 ## Solve
 

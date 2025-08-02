@@ -14,7 +14,8 @@ Viewing the flashing button in the top left, it appears to be flashing in an irr
 
 Capturing the network traffic when visiting the site shows the file `prettyanimation.js` being called:
 
-morse.png
+<img width="1707" height="673" alt="morse" src="https://github.com/user-attachments/assets/0b37cf9e-4550-4eaa-a3a7-f38bee4ec5ab" />
+
 
 Looking at the code, it definitely is using morse code to relay a hidden message:
 

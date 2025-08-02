@@ -12,7 +12,8 @@ Note: Flag is case insensitive.
 
 The account has a custom playlist:
 
-img
+![Uploading spotify.png…]()
+
 
 Viewing the songs, we can see the first letter for the first five songs spells out `cysea`. Continuing for the rest of the playlist we get:
 
