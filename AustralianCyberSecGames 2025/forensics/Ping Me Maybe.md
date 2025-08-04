@@ -12,7 +12,8 @@ Provide `challenge.pcap`
 
 Since `ping` is mentioned in the challenge title we filter for `icmp`:
 
-ping.png
+<img width="1419" height="523" alt="ping" src="https://github.com/user-attachments/assets/521e4562-15ee-4ee1-984c-1a93bd0dab93" />
+
 
 Navigating through the ping packets we can find the full flag:
 
