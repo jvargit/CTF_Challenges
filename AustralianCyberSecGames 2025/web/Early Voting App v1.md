@@ -14,7 +14,8 @@ Visiting the website we are provided some some test login credentials to authent
 
 The value of the parameter is simply `2`. Changing this to `1` or `3` allows us to access the accounts of other users in a classic Insecure Direct Object Reference (IDOR) vulnerbaility.
 
-vote.png
+<img width="672" height="740" alt="vote" src="https://github.com/user-attachments/assets/cb54284a-e6f2-41fa-b172-1d361fb6863d" />
+
 
 Changing into each user account at the `Edit Profile` page we can place all votes on a singular candidate and retrieve the flag:
 
