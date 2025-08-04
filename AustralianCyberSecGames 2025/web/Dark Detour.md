@@ -15,7 +15,8 @@ This challenge ended up being a standard SQL injection:
 
 This logs us in to `/admin`:
 
-sqlinject.png 
+<img width="751" height="193" alt="sqlinject" src="https://github.com/user-attachments/assets/83507202-2646-4805-a057-a56c2a5b1bed" />
+
 
 `secedu{sql_d03s_n0t_s33_r0l3s}`
 
