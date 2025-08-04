@@ -17,7 +17,8 @@ The mention of queries, description of HTTP exfiltration being too 'noisy' and t
 
 In Wireshark, DNS TXT queries can be specified with `dns.qry.type == 16`:
 
-dns.png
+<img width="1437" height="93" alt="dns" src="https://github.com/user-attachments/assets/50d55433-7b6a-4c63-9161-68f7ea0d81ba" />
+
 
 `base64` decoding the subdomain gives the flag:
 
