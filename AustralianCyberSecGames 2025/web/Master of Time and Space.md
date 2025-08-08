@@ -2,13 +2,14 @@
 
 While the government has provided the source code to the world, the mobile app won't run properly because of geolocation and time restrictions! Can you identify the time and coordinates required for spoofing? Don't forget to submit it to the relevant APIs to double check it's correct (and get the flag).
 
-img
+<img width="1587" height="2245" alt="Master_of_Time_and_Space_Chal_Poster" src="https://github.com/user-attachments/assets/3e818a84-2eee-41bd-9192-6a4a058770a6" />
+
 
 ## Challenge
 
-This challenge is fairly straight forward as the time and location is provided for us in the image. 
+This challenge is fairly straightforward as the time and location is provided for us in the image. 
 
-Looking up Croydon Public School we find the location in latitude and longitude as `(-33.87975533355316, 151.11492977422782)`.
+Looking up Croydon Public School on Google Maps we find the location in latitude and longitude as `(-33.87975533355316, 151.11492977422782)`.
 
 In the source we can see how location and time is checked:
 
