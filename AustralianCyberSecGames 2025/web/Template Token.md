@@ -82,15 +82,17 @@ Scanning the source code further we can see a template injection vulnerability:
 
 When we make a vote and capture the request in BurpSuite, we can see that the candidate parameter is sent with the `POST` request:
 
-ssti.png
+<img width="450" height="642" alt="ssti" src="https://github.com/user-attachments/assets/d6415dda-f78c-4fae-b835-52d03332df9a" />
+
 
 Sending this to the repeater, I experimented with different SSTI payloads to determine whether it was possible. Soon enough I got an error with `{{1+1}}`:
 
-cand.png
+<img width="933" height="481" alt="cand" src="https://github.com/user-attachments/assets/b493f4a2-bcf2-443b-b743-40e064b48299" />
+
 
 We can inject! Now the attack path is clear:
 
-- Utilise SSTI vulnerability to obtain secret key
+- Utilise SSTI vulnerability to obtain secret key (the secret in the screenshot **isn't** it)
 - Forge valid JWT
 - Send request to `/admin` with `Authorization` header set to match expected syntax
 
@@ -111,7 +113,7 @@ From the Flask documentation:
 
 Since our app passes `**globals` to the context, Jinja2 is able to access all global symbols, which includes imported modules, variables, etc. We can subsequently read in the secret key directly with `{{SECRETKEY}}`:
 
-ssti2.png
+<img width="569" height="380" alt="ssti2" src="https://github.com/user-attachments/assets/6bb4c516-5ae8-4100-b15f-ad120b0a7f36" />
 
 Our secret is `ldidyouknowshinigamisloveapples`. Let's forge a JWT!
 
@@ -119,11 +121,12 @@ Our secret is `ldidyouknowshinigamisloveapples`. Let's forge a JWT!
 
 As we mentioned before, the contents aren't important, just that it is validly signed with the secret key:
 
-jwt.png
+<img width="895" height="635" alt="jwt" src="https://github.com/user-attachments/assets/09debc21-28b9-495a-8247-c1b0881dbf33" />
 
-Submitting the token with our `POST` to `/login` successfully redirects to `/admin`:
+Including the token with our `POST` to `/login` successfully redirects to `/admin`:
 
-admin.png
+<img width="954" height="468" alt="admin" src="https://github.com/user-attachments/assets/a2befc97-0aae-4ff6-a0fd-782c417e20b1" />
+
 
 Where we find the flag:
 

