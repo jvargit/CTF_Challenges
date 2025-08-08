@@ -10,7 +10,8 @@ Viewing the source code, there are `/get-config` and `/update-config` API endpoi
 
 **`/get-config`:**
 
-getconf
+<img width="790" height="322" alt="getconf" src="https://github.com/user-attachments/assets/28f8d5c1-df84-4e76-b01e-45484725c534" />
+
 
 The printer is currently configured to send receipts to `13.237.99.206`.
 
@@ -80,7 +81,7 @@ def send_ipp_print_job(ip, citizen_id):
 
 It also tells us where the flag will be sent to (port `631`):
 
-```
+```py
 url = f"http://{ip}:631/printers/votes"
 ```
 
@@ -122,6 +123,11 @@ if __name__ == "__main__":
 python3 server.py
 ```
 
-Then we send our `POST` request to `/update-config` specifying our public IP as the new config address to send receipts to. Our server catches the request and we get the flag:
+Then we send our `POST` request to `/update-config` specifying our public IP as the new config address to send receipts to:
+
+<img width="684" height="402" alt="updateconf1" src="https://github.com/user-attachments/assets/9c069879-3957-4395-80ad-790d315b9033" />
+
+
+Our server catches the request and we get the flag:
 
 `cysea{printer_goes_brrrrr_eaecba2ab2}`
