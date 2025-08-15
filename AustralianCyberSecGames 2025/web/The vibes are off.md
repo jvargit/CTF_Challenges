@@ -98,11 +98,13 @@ ORDER BY c.name;
 
 The query evaluates to true as we expect and we can see results are returned:
 
-vibes
+<img width="882" height="307" alt="vibes" src="https://github.com/user-attachments/assets/696e1198-cfaf-4d24-926d-5390079b57f7" />
+
 
 If we change the letter to anything but `c`, empty results are returned since the query evaluates to false:
 
-vibes1
+<img width="711" height="239" alt="vibes1" src="https://github.com/user-attachments/assets/610b118a-0911-42d6-a8d2-2480db9eaf6f" />
+
 
 So, if we brute force this for every letter and number, we can slowly start to build the flag. I achieved this by using the Intruder in BurpSuite and creating a basic alphanumeric list, then sending multiple requests and filtering responses by length to identify matched characters.
 
@@ -114,7 +116,8 @@ So, if we brute force this for every letter and number, we can slowly start to b
 
 The flag is 47 characters long. Fortunately, portions of the flag are known (i.e `cysea{...}`) and others became guessable as the flag revealed itself. It took around 20 minutes for me to build the full flag:
 
-vibes3.png
+<img width="1174" height="502" alt="vibes3" src="https://github.com/user-attachments/assets/cc7e2fda-3e43-4ad1-908b-48252dfcdc41" />
+
 
 We can see in the image above that the last character in the flag was a `2`, since the length was greater than all other characters inserted into the query.
 
